@@ -56,7 +56,7 @@
           </div>
         </div>
         <div class="browser-content">
-          <h1 class="hero-display-title">
+          <h1 class="hero-display-title" id="typewriter-container">
             Aprendendo melhor sobre:<br>
             Interação Humano <span class="pixel-font">Computador.</span>
           </h1>
@@ -797,6 +797,69 @@
         targetTab.classList.add('active');
       }
     });
+
+    // Efeito Typewriter para o Hero
+    const typewriterContainer = document.getElementById('typewriter-container');
+    if (typewriterContainer) {
+      const line1Text = "Aprendendo melhor sobre:";
+      const line2TextPart1 = "Interação Humano ";
+      const line2TextPart2 = "Computador.";
+
+      function getHtmlForLength(len) {
+        let html = "";
+        const cursorHtml = '<span class="typewriter-cursor">|</span>';
+
+        if (len <= 24) {
+          html = `<span>${line1Text.substring(0, len)}</span>`;
+          return html + cursorHtml;
+        }
+
+        html = `<span>${line1Text}</span><br>`;
+        let rem = len - 24;
+
+        if (rem <= 17) {
+          html += `<span>${line2TextPart1.substring(0, rem)}</span>`;
+          return html + cursorHtml;
+        }
+
+        html += `<span>${line2TextPart1}</span>`;
+        let rem2 = rem - 17;
+
+        html += `<span class="pixel-font">${line2TextPart2.substring(0, rem2)}</span>`;
+        return html + cursorHtml;
+      }
+
+      let charIndex = 52;
+      let isDeleting = true;
+      let typingDelay = 100;
+      let erasingDelay = 40;
+      let pauseDelay = 3000;
+
+      function type() {
+        let currentHtml = getHtmlForLength(charIndex);
+        typewriterContainer.innerHTML = currentHtml;
+
+        if (isDeleting) {
+          charIndex--;
+          typingDelay = erasingDelay;
+        } else {
+          charIndex++;
+          typingDelay = 100;
+        }
+
+        if (!isDeleting && charIndex === 52) {
+          isDeleting = true;
+          typingDelay = pauseDelay;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          typingDelay = 500;
+        }
+
+        setTimeout(type, typingDelay);
+      }
+
+      setTimeout(type, 1500);
+    }
   </script>
 
 </body>

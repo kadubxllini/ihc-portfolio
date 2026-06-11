@@ -293,6 +293,7 @@ section {
   color: var(--text-main);
   z-index: 2;
   position: relative;
+  min-height: 8.1rem;
 }
 
 /* Fonte pixel - usada no destaque "Computador." do hero */
@@ -1014,6 +1015,7 @@ footer {
   .hero-display-title {
     font-size: 1.95rem;
     line-height: 1.25;
+    min-height: 4.9rem;
   }
 
   .main-container {
@@ -1336,4 +1338,18 @@ footer {
     text-transform: uppercase;
     margin-bottom: 2px;
   }
+}
+
+/* ============================================================
+   TYPEWRITER - Cursor piscante
+   ============================================================ */
+.typewriter-cursor {
+  animation: typewriter-blink 0.8s step-end infinite;
+  color: var(--accent-emerald);
+  margin-left: 2px;
+}
+
+@keyframes typewriter-blink {
+  from, to { opacity: 0 }
+  50% { opacity: 1 }
 }
