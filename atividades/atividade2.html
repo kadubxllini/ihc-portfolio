@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade A1 • IHC - Kadu Bellini</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="subpage-container">
+
+        <!-- NAVEGAÇÃO: Voltar para a lista de atividades -->
+        <div class="subpage-back-nav">
+          <a href="/#atividades" class="btn-back">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            <span>Voltar para Atividades</span>
+          </a>
+        </div>
+
+        <!-- CABEÇALHO DA PÁGINA -->
+        <div class="section-header">
+          <span class="section-tag">Atividade 02 • Atividade Avaliativa (A1)</span>
+          <h2 class="section-title">Análise Crítica de Portais de Uso Cotidiano</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">
+            Uma avaliação qualitativa detalhando três pontos positivos e três pontos críticos de usabilidade em sistemas reais sob a ótica de IHC.
+          </p>
+        </div>
+
+        <!-- CONTEÚDO: Artigo em texto corrido -->
+        <div class="article-card">
+          <div class="article-content">
+            <p>
+              Analisar interfaces reais que utilizamos em nosso cotidiano é a melhor forma de exercitar o olhar crítico do designer de interação. Para este estudo de usabilidade, a interface escolhida foi o <strong>Sistema de Matrícula e Controle de Notas Universitário</strong>, uma ferramenta de uso obrigatório diário por milhares de estudantes.
+            </p>
+
+            <div class="article-highlight">
+              "A usabilidade de um sistema é definida pela facilidade com que o usuário comum atinge seus objetivos sem sofrer atrito cognitivo desnecessário."
+            </div>
+
+            <h3>Pontos Positivos (Boas Práticas de IHC)</h3>
+            <p>
+              Estes elementos demonstram um bom entendimento das necessidades do usuário e facilitam o fluxo diário:
+            </p>
+            <ul class="article-list">
+              <li>
+                <strong>1. Visibilidade Clara de Notas e Frequência:</strong>
+                O painel de controle inicial exibe de forma imediata o progresso do semestre em tabelas compactas e de alto contraste. Não há necessidade de navegar por submenus profundos para responder à pergunta mais frequente do aluno: "como estão minhas notas?".
+              </li>
+              <li>
+                <strong>2. Feedbacks Visuais Instantâneos de Matrícula:</strong>
+                Ao submeter solicitações ou alterar disciplinas, mensagens flutuantes no topo da tela indicam claramente se a operação foi bem-sucedida ou recusada, com o uso de cores intuitivas (verde para sucesso, vermelho para avisos).
+              </li>
+              <li>
+                <strong>3. Consistência na Terminologia:</strong>
+                O vocabulário técnico utilizado ao longo de todo o portal condiz perfeitamente com a linguagem acadêmica habitual dos alunos (Termos como "Trancamento", "Prorrogação", "Dependência"), evitando interpretações ambíguas.
+              </li>
+            </ul>
+
+            <h3>Pontos Negativos (Rupturas de Usabilidade)</h3>
+            <p>
+              Aspectos que criam fricção de interação e representam sérios gargalos de produtividade:
+            </p>
+            <ul class="article-list">
+              <li>
+                <strong>1. Inexistência de Prevenção de Erros Grave:</strong>
+                Basta um clique sem confirmação no botão de cancelamento para desfazer configurações de matérias opcionais. O sistema deveria apresentar uma caixa de diálogo de confirmação (<em>Double-check</em>) antes de efetuar alterações irreversíveis.
+              </li>
+              <li>
+                <strong>2. Falta de Atalhos Exclusivos para Celulares:</strong>
+                A interface se reorganiza em telas menores, mas não se adapta ergonomicamente para cliques em touch screen. Botões cruciais ficam amontoados no rodapé e são menores que a zona confortável de toque recomendada (44x44px), gerando cliques acidentais contínuos.
+              </li>
+              <li>
+                <strong>3. Ausência de Ajuda Contextual nas Disciplinas:</strong>
+                Muitas matérias possuem pré-requisitos complexos indicados apenas por códigos crípticos (ex: <i>"PRE-REQUISITO SI032"</i>). O usuário é forçado a abandonar a tela atual de inscrição para buscar em PDFs qual matéria corresponde àquele código, violando a simplicidade de ajuda integrada.
+              </li>
+            </ul>
+
+            <h3>Propostas de Melhoria</h3>
+            <p>
+              Para resolver as falhas de modo eficiente, o fluxo de matrícula deve incorporar um painel de confirmação em duas etapas para ações destrutivas, otimização de targets móveis com espaçamento de 12px entre botões reativos, e tooltips flutuantes (balões de ajuda rápida) para explicar códigos de pré-requisitos de forma instantânea sem troca de tela.
+            </p>
+          </div>
+        </div>
+
+        <!-- RODAPÉ DA SUBPÁGINA -->
+        <hr style="border: 0; border-top: 1px solid var(--border-dark); margin: 30px 0 10px 0;">
+        <p style="color: var(--text-muted); font-size: 0.72rem; text-align: center;">
+          © 2026 Kadu Bellini • Portfólio Acadêmico para atividade IHC.
+        </p>
+
+      </div>
+    </main>
+  </body>
+</html>
